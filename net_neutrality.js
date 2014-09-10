@@ -34,5 +34,5 @@ function handleText(textNode)
     var pattern = new RegExp("/Protect([\S]*) Net Neutrality/", "gi", "Prevent$1 Cable Company Fuckery");
     var new_value = value.replace(pattern);
     
-    textNode.nodeValue = v;
+    textNode.nodeValue = new_value;
 }
