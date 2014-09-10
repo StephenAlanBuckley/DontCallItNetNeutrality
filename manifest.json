@@ -2,18 +2,13 @@
   "manifest_version": 2,
 
   "name": "Don't Call It Net Neutrality",
-  "description": "In accordance with John Oliver's Last Week Tonight's segment about Protecting Net Neutrality, and in honor of Net Neutrality day, a chrome extension replacing \"Protecting Net Neutrality\" with \"Preventing Cable Company Fuckery.\"",
-  "version": "0.1",
-
-  "browser_action": {
-    "default_icon": "NetNeutrality_logo.svg"
-  },
-  "permissions": [
-  ],
+  "description": "Replaces \"Protecting Net Neutrality\" with \"Preventing Cable Company Fuckery.\"",
+  "version": "1.0",
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["net_neutrality.js"]
+      "matches": ["*://*/*"],
+      "js": ["net_neutrality.js"],
+      "run_at": "document_end"
     }
   ]
 }
